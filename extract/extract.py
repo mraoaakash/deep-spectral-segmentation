@@ -1,7 +1,7 @@
 from functools import partial
 from pathlib import Path
 from typing import Optional, Tuple
-import PIL
+
 import cv2
 import fire
 import numpy as np
@@ -348,7 +348,7 @@ def _extract_multi_region_segmentations(
         segmap[zero_region] = bg_index
 
     # Save dict
-    Image.fromarray(segmap).convert('L').resize((1000,1000), PIL.Image.BILINEAR ).save(output_file)
+    Image.fromarray(segmap).convert('L').save(output_file)
 
 
 def extract_multi_region_segmentations(
@@ -401,10 +401,9 @@ def _extract_single_region_segmentations(
     # Eigenvector
     eigenvector = data_dict['eigenvectors'][1].numpy()  # take smallest non-zero eigenvector
     segmap = (eigenvector > threshold).reshape(H_patch, W_patch)
-    segmap = Image.fromarray(segmap).convert('L').resize((1000,1000), PIL.Image.BILINEAR )
 
     # Save dict
-    segmap.save(output_file)
+    Image.fromarray(segmap).convert('L').save(output_file)
 
 
 def extract_single_region_segmentations(
@@ -643,7 +642,7 @@ def extract_semantic_segmentations(
         semantic_segmap = np.vectorize(semantic_map.__getitem__)(segmap)
         # Save
         output_file = str(Path(output_dir) / f'{image_id}.png')
-        Image.fromarray(semantic_segmap.astype(np.uint8)).convert('L').resize((1000,1000), PIL.Image.BILINEAR ).save(output_file)
+        Image.fromarray(semantic_segmap.astype(np.uint8)).convert('L').save(output_file)
     
     print(f'Saved features to {output_dir}')
 
@@ -654,7 +653,7 @@ def _extract_crf_segmentations(
     num_classes: int,
     output_dir: str,
     crf_params: Tuple,
-    downsample_factor: int = 0,
+    downsample_factor: int = 16,
 ):
     index, (image_file, segmap_path) = inp
 
@@ -691,7 +690,7 @@ def _extract_crf_segmentations(
     segmap_crf = denseCRF.densecrf(image, unary_potentials, crf_params)  # (H_pad, W_pad)
 
     # Save
-    Image.fromarray(segmap_crf).convert('L').resize((1000,1000), PIL.Image.BILINEAR ).save(output_file)
+    Image.fromarray(segmap_crf).convert('L').save(output_file)
 
 
 def extract_crf_segmentations(
@@ -700,7 +699,7 @@ def extract_crf_segmentations(
     segmentations_dir: str,
     output_dir: str,
     num_classes: int = 21,
-    downsample_factor: int = 0,
+    downsample_factor: int = 16,
     multiprocessing: int = 0,
     # CRF parameters
     w1    = 10,    # weight of bilateral term  # default: 10.0,
