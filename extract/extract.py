@@ -403,7 +403,7 @@ def _extract_single_region_segmentations(
     segmap = (eigenvector > threshold).reshape(H_patch, W_patch)
 
     # Save dict
-    Image.fromarray(segmap).convert('L').save(output_file)
+    Image.fromarray(segmap).convert('L').resize((1000,1000), PIL.Image.BILINEAR ).save(output_file)
 
 
 def extract_single_region_segmentations(
@@ -642,7 +642,7 @@ def extract_semantic_segmentations(
         semantic_segmap = np.vectorize(semantic_map.__getitem__)(segmap)
         # Save
         output_file = str(Path(output_dir) / f'{image_id}.png')
-        Image.fromarray(semantic_segmap.astype(np.uint8)).convert('L').save(output_file)
+        Image.fromarray(semantic_segmap.astype(np.uint8)).convert('L').resize((1000,1000), PIL.Image.BILINEAR ).save(output_file)
     
     print(f'Saved features to {output_dir}')
 
@@ -690,7 +690,7 @@ def _extract_crf_segmentations(
     segmap_crf = denseCRF.densecrf(image, unary_potentials, crf_params)  # (H_pad, W_pad)
 
     # Save
-    Image.fromarray(segmap_crf).convert('L').save(output_file)
+    Image.fromarray(segmap_crf).convert('L').resize((1000,1000), PIL.Image.BILINEAR ).save(output_file)
 
 
 def extract_crf_segmentations(
