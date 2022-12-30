@@ -100,8 +100,8 @@ def make_output_dir(output_dir, check_if_empty=True):
     output_dir.mkdir(exist_ok=True, parents=True)
     if check_if_empty and (len(list(output_dir.iterdir())) > 0):
         print(f'Output dir: {str(output_dir)}')
-        if input(f'Output dir already contains files. Continue? (y/n) >> ') != 'y':
-            sys.exit()  # skip because already generated
+        # if input(f'Output dir already contains files. Continue? (y/n) >> ') != 'y':
+        #     sys.exit()  # skip because already generated
 
 
 def get_largest_cc(mask: np.array):
