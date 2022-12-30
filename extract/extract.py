@@ -401,9 +401,10 @@ def _extract_single_region_segmentations(
     # Eigenvector
     eigenvector = data_dict['eigenvectors'][1].numpy()  # take smallest non-zero eigenvector
     segmap = (eigenvector > threshold).reshape(H_patch, W_patch)
+    segmap = Image.fromarray(segmap).convert('L').resize((1000,1000), PIL.Image.BILINEAR )
 
     # Save dict
-    Image.fromarray(segmap).convert('L').resize((1000,1000), PIL.Image.BILINEAR ).save(output_file)
+    segmap.save(output_file)
 
 
 def extract_single_region_segmentations(
