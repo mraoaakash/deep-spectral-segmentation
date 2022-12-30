@@ -699,7 +699,7 @@ def extract_crf_segmentations(
     segmentations_dir: str,
     output_dir: str,
     num_classes: int = 21,
-    downsample_factor: int = 16,
+    downsample_factor: int = 0,
     multiprocessing: int = 0,
     # CRF parameters
     w1    = 10,    # weight of bilateral term  # default: 10.0,
