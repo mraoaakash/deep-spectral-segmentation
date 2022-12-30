@@ -1,7 +1,7 @@
 from functools import partial
 from pathlib import Path
 from typing import Optional, Tuple
-
+import PIL
 import cv2
 import fire
 import numpy as np
@@ -348,7 +348,7 @@ def _extract_multi_region_segmentations(
         segmap[zero_region] = bg_index
 
     # Save dict
-    Image.fromarray(segmap).convert('L').save(output_file)
+    Image.fromarray(segmap).convert('L').resize((1000,1000), PIL.Image.BILINEAR ).save(output_file)
 
 
 def extract_multi_region_segmentations(
