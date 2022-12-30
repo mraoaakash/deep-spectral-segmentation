@@ -34,5 +34,3 @@ Yeehaw:
 		--output_dir "./data/object-segmentation/VOC2012/single_region_segmentation/crf/laplacian_dino_vits16" \
 		--downsample_factor 16 \
 		--num_classes 2
-
-	python interpolator.py
