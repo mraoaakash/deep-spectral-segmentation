@@ -32,5 +32,5 @@ Yeehaw:
 		--images_root "./data/object-segmentation/VOC2012/images" \
 		--segmentations_dir "./data/object-segmentation/VOC2012/single_region_segmentation/patches/laplacian_dino_vits16" \
 		--output_dir "./data/object-segmentation/VOC2012/single_region_segmentation/crf/laplacian_dino_vits16" \
-		--downsample_factor 0 \
+		--downsample_factor 1 \
 		--num_classes 2
