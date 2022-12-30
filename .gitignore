@@ -13,6 +13,11 @@ preprocess/extract-features/semantic_segmentations_*
 preprocess/extract-features/crf_semantic_segmentations_*
 old
 dino
+*.jpg
+*.png
+*.gif
+*.jpeg
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -47,7 +52,6 @@ test_tube_exp/
 tests/tests_tt_dir/
 tests/save_dir
 default/   
-data/
 test_tube_logs/
 test_tube_data/
 datasets/
