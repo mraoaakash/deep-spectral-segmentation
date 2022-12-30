@@ -1,0 +1,27 @@
+# Images
+*.png
+*.tiff
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.ico
+*.svg
+*.psd
+*.pspimage
+*.tga
+*.thm
+*.yuv
+*.dds
+*.raw
+*.cr2
+*.nef
+*.sr2
+*.orf
+*.arw
+*.dng
+*.3fr
+*.mef
+*.pef
+*.x3f
+*.srw   
