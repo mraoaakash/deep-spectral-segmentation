@@ -12,7 +12,6 @@ def main():
     if not os.path.exists(outpath):
         os.makedirs(outpath)
     for i in os.listdir("/home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/data/object-segmentation/VOC2012/single_region_segmentation/patches/laplacian_dino_vits16"):
-        if i.endswith('.png'):
-            interpolator(i)
+        interpolator(i)
 
 main()
