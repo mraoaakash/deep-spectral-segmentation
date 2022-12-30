@@ -653,7 +653,7 @@ def _extract_crf_segmentations(
     num_classes: int,
     output_dir: str,
     crf_params: Tuple,
-    downsample_factor: int = 16,
+    downsample_factor: int = 0,
 ):
     index, (image_file, segmap_path) = inp
 
