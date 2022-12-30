@@ -5,7 +5,7 @@ outpath = "/home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-
 def interpolator(path, scale=10):
     img = cv2.imread(path)
     name= path.split('/')[-1]
-    bilinear_img = cv2.resize(img,None, fx = 1000, fy = 1000, interpolation = cv2.INTER_LINEAR)
+    bilinear_img = cv2.resize(img,(1000,1000), interpolation = cv2.INTER_LINEAR)
     cv2.imwrite(os.path.join(outpath,name,bilinear_img))
 
 def main():
