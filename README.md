@@ -46,7 +46,7 @@ data
 
 We first extract features from images and stores these into files. We then extract eigenvectors from these features. Once we have the eigenvectors, we can perform downstream tasks such as object segmentation and object localization. 
 
-The primary script for this extraction process is `extract.py` in the `extract/` directory. All functions in `extract.py` have helpful docstrings with example usage. 
+The primary script for this extraction process is `/home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py` in the `extract/` directory. All functions in `/home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py` have helpful docstrings with example usage. 
 
 ##### Step 1: Feature Extraction
 
@@ -57,7 +57,7 @@ With regard to models, our repository currently only supports DINO, but other mo
 Here is an example using `dino_vits16`:
 
 ```bash
-python extract.py extract_features \
+python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_features \
     --images_list "./data/VOC2012/lists/images.txt" \
     --images_root "./data/VOC2012/images" \
     --output_dir "./data/VOC2012/features/dino_vits16" \
@@ -72,7 +72,7 @@ Second, we extract eigenvectors from our features and save them to `.pth` files.
 Here, we extract the top `K=5` eigenvectors of the Laplacian matrix of our features:
 
 ```bash
-python extract.py extract_eigs \
+python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_eigs \
     --images_root "./data/VOC2012/images" \
     --features_dir "./data/VOC2012/features/dino_vits16" \
     --which_matrix "laplacian" \
@@ -129,7 +129,7 @@ For example:
 DATASET=CUB_200_2011
 
 # Features
-python extract.py extract_features \
+python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_features \
     --images_list "./data/object-segmentation/${DATASET}/lists/images.txt" \
     --images_root "./data/object-segmentation/${DATASET}/images" \
     --output_dir "./data/object-segmentation/${DATASET}/features/dino_vits16" \
@@ -137,7 +137,7 @@ python extract.py extract_features \
     --batch_size 1
 
 # Eigenvectors
-python extract.py extract_eigs \
+python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_eigs \
     --images_root "./data/object-segmentation/${DATASET}/images" \
     --features_dir "./data/object-segmentation/${DATASET}/features/dino_vits16/" \
     --which_matrix "laplacian" \
@@ -146,14 +146,14 @@ python extract.py extract_eigs \
 
 
 # Extract single-region segmentatiosn
-python extract.py extract_single_region_segmentations \
+python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_single_region_segmentations \
     --features_dir "./data/object-segmentation/${DATASET}/features/dino_vits16" \
     --eigs_dir "./data/object-segmentation/${DATASET}/eigs/laplacian_dino_vits16" \
     --output_dir "./data/object-segmentation/${DATASET}/single_region_segmentation/patches/laplacian_dino_vits16"
 
 # With CRF
 # Optionally, you can also use `--multiprocessing 64` to speed up computation by running on 64 processes
-python extract.py extract_crf_segmentations \
+python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_crf_segmentations \
     --images_list "./data/object-segmentation/${DATASET}/lists/images.txt" \
     --images_root "./data/object-segmentation/${DATASET}/images" \
     --segmentations_dir "./data/object-segmentation/${DATASET}/single_region_segmentation/patches/laplacian_dino_vits16" \
@@ -170,7 +170,7 @@ python main.py predictions.root="./data/object-segmentation" predictions.run="si
 
 By default, this assumes that all four object segmentations are available. To run on a custom dataset or only a subset of these datasets, simply edit `configs/eval.yaml`. 
 
-Also, if you want to visualize your segmentations, you should be able to use `streamlit run extract.py vis_segmentations` (after installing streamlit). 
+Also, if you want to visualize your segmentations, you should be able to use `streamlit run /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py vis_segmentations` (after installing streamlit). 
 
 #### Semantic Segmentation
 
