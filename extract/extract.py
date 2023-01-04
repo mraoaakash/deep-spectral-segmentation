@@ -691,7 +691,7 @@ def _extract_crf_segmentations(
     print(f'CRF done for {segmap_crf}')
 
     # Save
-    Image.fromarray(segmap_crf).convert('L').save(output_file)
+    Image.fromarray(segmap_orig_res).convert('L').save(output_file)
 
 
 def extract_crf_segmentations(
