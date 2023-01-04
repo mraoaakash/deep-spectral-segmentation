@@ -676,9 +676,9 @@ def _extract_crf_segmentations(
     H_pad, W_pad = H_patch * P, W_patch * P
 
     # Resize and expand
-    segmap_upscaled = cv2.resize(segmap, dsize=(W_pad, H_pad), interpolation=cv2.INTER_LINEAR)  # (H_pad, W_pad)
-    segmap_orig_res = cv2.resize(segmap, dsize=(W, H), interpolation=cv2.INTER_LINEAR)  # (H, W)
-    segmap_orig_res[:H_pad, :W_pad] = segmap_upscaled  # replace with the correctly upscaled version, just in case they are different
+    segmap_orig_res= cv2.resize(segmap, dsize=(W_pad, H_pad), interpolation=cv2.INTER_LINEAR)  # (H_pad, W_pad)
+    # segmap_upscaled = cv2.resize(segmap, dsize=(W, H), interpolation=cv2.INTER_LINEAR)  # (H, W)
+    # segmap_orig_res[:H_pad, :W_pad] = segmap_upscaled  # replace with the correctly upscaled version, just in case they are different
 
     # Convert binary
     if set(np.unique(segmap_orig_res).tolist()) == {0, 255}:
