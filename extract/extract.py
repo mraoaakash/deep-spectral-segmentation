@@ -691,8 +691,8 @@ def _extract_crf_segmentations(
     segmap_crf = denseCRF.densecrf(image, unary_potentials, crf_params)  # (H_pad, W_pad)
 
     # Save
-    segmap_orig_res = segmap_crf.astype(np.uint8)*255
-    Image.fromarray(segmap_orig_res).convert('L').save(output_file)
+    segmap_crf = segmap_crf.astype(np.uint8)*255
+    Image.fromarray(segmap_crf).convert('L').save(output_file)
 
 
 def extract_crf_segmentations(
