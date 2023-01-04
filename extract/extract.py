@@ -15,10 +15,6 @@ from sklearn.decomposition import PCA
 from torchvision.utils import draw_bounding_boxes
 from tqdm import tqdm
 
-
-import pydensecrf.densecrf as dcrf
-from pydensecrf.utils import compute_unary, unary_from_softmax
-
 import extract_utils as utils
 
 
@@ -683,29 +679,19 @@ def _extract_crf_segmentations(
     segmap_upscaled = cv2.resize(segmap, dsize=(W_pad, H_pad), interpolation=cv2.INTER_LINEAR)  # (H_pad, W_pad)
     segmap_orig_res = cv2.resize(segmap, dsize=(W, H), interpolation=cv2.INTER_LINEAR)  # (H, W)
     segmap_orig_res[:H_pad, :W_pad] = segmap_upscaled  # replace with the correctly upscaled version, just in case they are different
-    segmap_orig_res = segmap_orig_res/255  # (H, W)
-    # feat_first = segmap_orig_res.transpose((2, 0, 1)).reshape((num_classes,-1))
-    # unary = unary_from_softmax(feat_first)
-    # unary = np.ascontiguousarray(unary) # (n_classes, H, W)
-    d = dcrf.DenseCRF2D(H, W, num_classes)
 
-    d.setUnaryEnergy()
-    d.addPairwiseGaussian(sxy=(5, 5), compat=10, kernel=dcrf.DIAG_KERNEL,
-                            normalization=dcrf.NORMALIZE_SYMMETRIC)
+    # Convert binary
+    if set(np.unique(segmap_orig_res).tolist()) == {0, 255}:
+        segmap_orig_res[segmap_orig_res == 255] = 1
 
-    d.addPairwiseBilateral(sxy=(10, 10), srgb=(13, 13, 13), rgbim=image,
-                        compat=10,
-                        kernel=dcrf.DIAG_KERNEL,
-                        normalization=dcrf.NORMALIZE_SYMMETRIC)
-    Q = d.inference(5)
-    res = np.argmax(Q, axis=0).reshape((H, W))
+    # CRF
+    import denseCRF  # make sure you've installed SimpleCRF
+    unary_potentials = F.one_hot(torch.from_numpy(segmap_orig_res).long(), num_classes=num_classes)
+    segmap_crf = denseCRF.densecrf(image, unary_potentials, crf_params)  # (H_pad, W_pad)
+    print(f'CRF done for {segmap_crf}')
 
-    # res_hot = to_categorical(res) * 255.0
-
-    crf_mask = np.array(res*255, dtype=np.uint8)
-    print(f'CRF mask shape: {crf_mask}')
-
-    Image.fromarray(crf_mask).convert('L').save(output_file)
+    # Save
+    Image.fromarray(segmap_orig_res).convert('L').save(output_file)
 
 
 def extract_crf_segmentations(
