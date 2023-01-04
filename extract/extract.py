@@ -676,8 +676,8 @@ def _extract_crf_segmentations(
     H_pad, W_pad = H_patch * P, W_patch * P
 
     # Resize and expand
-    segmap_upscaled = cv2.resize(segmap, dsize=(W_pad, H_pad), interpolation=cv2.INTER_NEAREST)  # (H_pad, W_pad)
-    segmap_orig_res = cv2.resize(segmap, dsize=(W, H), interpolation=cv2.INTER_NEAREST)  # (H, W)
+    segmap_upscaled = cv2.resize(segmap, dsize=(W_pad, H_pad), interpolation=cv2.INTER_LINEAR)  # (H_pad, W_pad)
+    segmap_orig_res = cv2.resize(segmap, dsize=(W, H), interpolation=cv2.INTER_LINEAR)  # (H, W)
     segmap_orig_res[:H_pad, :W_pad] = segmap_upscaled  # replace with the correctly upscaled version, just in case they are different
 
     # Convert binary
@@ -688,6 +688,7 @@ def _extract_crf_segmentations(
     import denseCRF  # make sure you've installed SimpleCRF
     unary_potentials = F.one_hot(torch.from_numpy(segmap_orig_res).long(), num_classes=num_classes)
     segmap_crf = denseCRF.densecrf(image, unary_potentials, crf_params)  # (H_pad, W_pad)
+    print(f'CRF done for {segmap_crf}')
 
     # Save
     Image.fromarray(segmap_crf).convert('L').save(output_file)
