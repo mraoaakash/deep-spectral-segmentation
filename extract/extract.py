@@ -680,10 +680,11 @@ def _extract_crf_segmentations(
     segmap_orig_res = cv2.resize(segmap, dsize=(W, H), interpolation=cv2.INTER_NEAREST)  # (H, W)
     segmap_orig_res[:H_pad, :W_pad] = segmap_upscaled  # replace with the correctly upscaled version, just in case they are different
 
-    # Convert binary
-    if set(np.unique(segmap_orig_res).tolist()) == {0, 255}:
-        segmap_orig_res[segmap_orig_res == 255] = 1
+    # # Convert binary
+    # if set(np.unique(segmap_orig_res).tolist()) == {0, 255}:
+    #     segmap_orig_res[segmap_orig_res == 255] = 1
 
+    segmap_orig_res = segmap_orig_res.astype(np.uint8)//255
     # CRF
     import denseCRF  # make sure you've installed SimpleCRF
     unary_potentials = F.one_hot(torch.from_numpy(segmap_orig_res).long(), num_classes=num_classes)
