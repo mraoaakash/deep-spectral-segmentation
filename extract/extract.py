@@ -689,7 +689,7 @@ def _extract_crf_segmentations(
     unary = np.ascontiguousarray(unary) # (n_classes, H, W)
     d = dcrf.DenseCRF2D(H, W, num_classes)
 
-    d.setUnaryEnergy(unary)
+    d.setUnaryEnergy()
     d.addPairwiseGaussian(sxy=(5, 5), compat=10, kernel=dcrf.DIAG_KERNEL,
                             normalization=dcrf.NORMALIZE_SYMMETRIC)
 
@@ -703,6 +703,7 @@ def _extract_crf_segmentations(
     # res_hot = to_categorical(res) * 255.0
 
     crf_mask = np.array(res*255, dtype=np.uint8)
+    print(f'CRF mask shape: {crf_mask}')
 
     Image.fromarray(crf_mask).convert('L').save(output_file)
 
