@@ -16,7 +16,7 @@ Yeehaw:
 		--features_dir "./data/object-segmentation/VOC2012/features/dino_vits16/" \
 		--which_matrix "laplacian" \
 		--output_dir "./data/object-segmentation/VOC2012/eigs/laplacian_dino_vits16" \
-		--K 2 \
+		--K 5 \
 
 
 	# Extract single-region segmentatiosn
@@ -33,4 +33,4 @@ Yeehaw:
 		--segmentations_dir "./data/object-segmentation/VOC2012/single_region_segmentation/patches/laplacian_dino_vits16" \
 		--output_dir "./data/object-segmentation/VOC2012/single_region_segmentation/crf/laplacian_dino_vits16" \
 		--downsample_factor 1 \
-		--num_classes 2
+		--num_classes 1
