@@ -684,9 +684,9 @@ def _extract_crf_segmentations(
     segmap_orig_res = cv2.resize(segmap, dsize=(W, H), interpolation=cv2.INTER_LINEAR)  # (H, W)
     segmap_orig_res[:H_pad, :W_pad] = segmap_upscaled  # replace with the correctly upscaled version, just in case they are different
     segmap_orig_res = segmap_orig_res/255  # (H, W)
-    feat_first = segmap_orig_res.transpose((2, 0, 1)).reshape((num_classes,-1))
-    unary = unary_from_softmax(feat_first)
-    unary = np.ascontiguousarray(unary) # (n_classes, H, W)
+    # feat_first = segmap_orig_res.transpose((2, 0, 1)).reshape((num_classes,-1))
+    # unary = unary_from_softmax(feat_first)
+    # unary = np.ascontiguousarray(unary) # (n_classes, H, W)
     d = dcrf.DenseCRF2D(H, W, num_classes)
 
     d.setUnaryEnergy()
