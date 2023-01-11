@@ -31,8 +31,7 @@ Level 9:
 		--output_dir "./data/object-segmentation/dataset/L9/single_region_segmentation/crf/laplacian_dino_vits16" \
 		--downsample_factor 16 \
 		--num_classes 2
-
-Level 10:
+		
 	# Features
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_features \
 		--images_list "./data/object-segmentation/dataset/L10/images.txt" \
