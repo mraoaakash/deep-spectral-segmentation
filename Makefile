@@ -10,7 +10,7 @@ Level 9:
 	# Eigenvectors
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_eigs \
 		--images_root "./data/object-segmentation/dataset/L9/images" \
-		--features_dir ".data/object-segmentation/dataset/L9/features/dino_vits16/" \
+		--features_dir "./data/object-segmentation/dataset/L9/features/dino_vits16/" \
 		--which_matrix "laplacian" \
 		--output_dir "./data/object-segmentation/dataset/L9/eigs/laplacian_dino_vits16" \
 		--K 5 \
@@ -44,7 +44,7 @@ Level 9:
 # 	# Eigenvectors
 # 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_eigs \
 # 		--images_root "./data/object-segmentation/dataset/L10/images" \
-# 		--features_dir ".data/object-segmentation/dataset/L10/features/dino_vits16/" \
+# 		--features_dir "./data/object-segmentation/dataset/L10/features/dino_vits16/" \
 # 		--which_matrix "laplacian" \
 # 		--output_dir "./data/object-segmentation/dataset/L10/eigs/laplacian_dino_vits16" \
 # 		--K 5 \
@@ -78,7 +78,7 @@ Level 9:
 # 	# Eigenvectors
 # 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_eigs \
 # 		--images_root "./data/object-segmentation/dataset/L11/images" \
-# 		--features_dir ".data/object-segmentation/dataset/L11/features/dino_vits16/" \
+# 		--features_dir "./data/object-segmentation/dataset/L11/features/dino_vits16/" \
 # 		--which_matrix "laplacian" \
 # 		--output_dir "./data/object-segmentation/dataset/L11/eigs/laplacian_dino_vits16" \
 # 		--K 5 \
@@ -112,7 +112,7 @@ Level 9:
 # 	# Eigenvectors
 # 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_eigs \
 # 		--images_root "./data/object-segmentation/dataset/L12/images" \
-# 		--features_dir ".data/object-segmentation/dataset/L12/features/dino_vits16/" \
+# 		--features_dir "./data/object-segmentation/dataset/L12/features/dino_vits16/" \
 # 		--which_matrix "laplacian" \
 # 		--output_dir "./data/object-segmentation/dataset/L12/eigs/laplacian_dino_vits16" \
 # 		--K 5 \
@@ -147,7 +147,7 @@ Level 9:
 # 	# Eigenvectors
 # 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_eigs \
 # 		--images_root "./data/object-segmentation/dataset/L13/images" \
-# 		--features_dir ".data/object-segmentation/dataset/L13/features/dino_vits16/" \
+# 		--features_dir "./data/object-segmentation/dataset/L13/features/dino_vits16/" \
 # 		--which_matrix "laplacian" \
 # 		--output_dir "./data/object-segmentation/dataset/L13/eigs/laplacian_dino_vits16" \
 # 		--K 5 \
@@ -181,7 +181,7 @@ Level 9:
 # 	# Eigenvectors
 # 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_eigs \
 # 		--images_root "./data/object-segmentation/dataset/L14/images" \
-# 		--features_dir ".data/object-segmentation/dataset/L14/features/dino_vits16/" \
+# 		--features_dir "./data/object-segmentation/dataset/L14/features/dino_vits16/" \
 # 		--which_matrix "laplacian" \
 # 		--output_dir "./data/object-segmentation/dataset/L14/eigs/laplacian_dino_vits16" \
 # 		--K 5 \
@@ -215,7 +215,7 @@ Level 9:
 # 	# Eigenvectors
 # 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_eigs \
 # 		--images_root "./data/object-segmentation/dataset/L15/images" \
-# 		--features_dir ".data/object-segmentation/dataset/L15/features/dino_vits16/" \
+# 		--features_dir "./data/object-segmentation/dataset/L15/features/dino_vits16/" \
 # 		--which_matrix "laplacian" \
 # 		--output_dir "./data/object-segmentation/dataset/L15/eigs/laplacian_dino_vits16" \
 # 		--K 5 \
@@ -249,7 +249,7 @@ Level 9:
 # 	# Eigenvectors
 # 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_eigs \
 # 		--images_root "./data/object-segmentation/dataset/L16/images" \
-# 		--features_dir ".data/object-segmentation/dataset/L16/features/dino_vits16/" \
+# 		--features_dir "./data/object-segmentation/dataset/L16/features/dino_vits16/" \
 # 		--which_matrix "laplacian" \
 # 		--output_dir "./data/object-segmentation/dataset/L16/eigs/laplacian_dino_vits16" \
 # 		--K 5 \
@@ -283,7 +283,7 @@ Level 9:
 # 	# Eigenvectors
 # 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_eigs \
 # 		--images_root "./data/object-segmentation/dataset/L17/images" \
-# 		--features_dir ".data/object-segmentation/dataset/L17/features/dino_vits16/" \
+# 		--features_dir "./data/object-segmentation/dataset/L17/features/dino_vits16/" \
 # 		--which_matrix "laplacian" \
 # 		--output_dir "./data/object-segmentation/dataset/L17/eigs/laplacian_dino_vits16" \
 # 		--K 5 \
