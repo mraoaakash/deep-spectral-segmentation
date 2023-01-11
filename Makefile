@@ -25,7 +25,7 @@ Level 9:
 	# With CRF
 	# Optionally, you can also use `--multiprocessing 64` to speed up computation by running on 64 processes
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_crf_segmentations \
-		--images_list "./data/object-segmentation/dataset/L9/lists/images.txt" \
+		--images_list "./data/object-segmentation/dataset/L9/images.txt" \
 		--images_root "./data/object-segmentation/dataset/L9/images" \
 		--segmentations_dir "./data/object-segmentation/dataset/L9/single_region_segmentation/patches/laplacian_dino_vits16" \
 		--output_dir "./data/object-segmentation/dataset/L9/single_region_segmentation/crf/laplacian_dino_vits16" \
