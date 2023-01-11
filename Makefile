@@ -39,7 +39,7 @@ Level 9:
 
 	# Features
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_features \
-		--images_list "./data/object-segmentation/dataset/L16/images.txt" \
+		--images_list "./data/object-segmentation/dataset/L10/images.txt" \
 		--images_root "./data/object-segmentation/dataset/L10/images" \
 		--output_dir "./data/object-segmentation/dataset/L10/features/dino_vits16" \
 		--model_name dino_vits16 \
