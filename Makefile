@@ -2,14 +2,14 @@ Level 9:
 	# Features
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_features \
 		--images_list "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L17/images.txt" \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L17/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L17/accepted" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L17/features/dino_vits16" \
 		--model_name dino_vits16 \
 		--batch_size 1
 
 	# Eigenvectors
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_eigs \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L17/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L17/accepted" \
 		--features_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L17/features/dino_vits16/" \
 		--which_matrix "laplacian" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L17/eigs/laplacian_dino_vits16" \
@@ -26,7 +26,7 @@ Level 9:
 	# Optionally, you can also use `--multiprocessing 64` to speed up computation by running on 64 processes
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_crf_segmentations \
 		--images_list "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L17/images.txt" \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L17/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L17/accepted" \
 		--segmentations_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L17/single_region_segmentation/patches/laplacian_dino_vits16" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L17/single_region_segmentation/crf/laplacian_dino_vits16" \
 		--downsample_factor 16 \
@@ -34,14 +34,14 @@ Level 9:
 	# Features
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_features \
 		--images_list "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L16/images.txt" \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L16/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L16/accepted" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L16/features/dino_vits16" \
 		--model_name dino_vits16 \
 		--batch_size 1
 
 	# Eigenvectors
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_eigs \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L16/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L16/accepted" \
 		--features_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L16/features/dino_vits16/" \
 		--which_matrix "laplacian" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L16/eigs/laplacian_dino_vits16" \
@@ -58,7 +58,7 @@ Level 9:
 	# Optionally, you can also use `--multiprocessing 64` to speed up computation by running on 64 processes
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_crf_segmentations \
 		--images_list "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L16/images.txt" \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L16/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L16/accepted" \
 		--segmentations_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L16/single_region_segmentation/patches/laplacian_dino_vits16" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L16/single_region_segmentation/crf/laplacian_dino_vits16" \
 		--downsample_factor 16 \
@@ -66,14 +66,14 @@ Level 9:
 	# Features
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_features \
 		--images_list "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L15/images.txt" \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L15/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L15/accepted" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L15/features/dino_vits16" \
 		--model_name dino_vits16 \
 		--batch_size 1
 
 	# Eigenvectors
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_eigs \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L15/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L15/accepted" \
 		--features_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L15/features/dino_vits16/" \
 		--which_matrix "laplacian" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L15/eigs/laplacian_dino_vits16" \
@@ -90,7 +90,7 @@ Level 9:
 	# Optionally, you can also use `--multiprocessing 64` to speed up computation by running on 64 processes
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_crf_segmentations \
 		--images_list "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L15/images.txt" \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L15/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L15/accepted" \
 		--segmentations_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L15/single_region_segmentation/patches/laplacian_dino_vits16" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L15/single_region_segmentation/crf/laplacian_dino_vits16" \
 		--downsample_factor 16 \
@@ -98,14 +98,14 @@ Level 9:
 	# Features
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_features \
 		--images_list "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L14/images.txt" \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L14/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L14/accepted" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L14/features/dino_vits16" \
 		--model_name dino_vits16 \
 		--batch_size 1
 
 	# Eigenvectors
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_eigs \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L14/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L14/accepted" \
 		--features_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L14/features/dino_vits16/" \
 		--which_matrix "laplacian" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L14/eigs/laplacian_dino_vits16" \
@@ -122,7 +122,7 @@ Level 9:
 	# Optionally, you can also use `--multiprocessing 64` to speed up computation by running on 64 processes
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_crf_segmentations \
 		--images_list "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L14/images.txt" \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L14/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L14/accepted" \
 		--segmentations_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L14/single_region_segmentation/patches/laplacian_dino_vits16" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L14/single_region_segmentation/crf/laplacian_dino_vits16" \
 		--downsample_factor 16 \
@@ -130,14 +130,14 @@ Level 9:
 	# Features
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_features \
 		--images_list "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L13/images.txt" \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L13/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L13/accepted" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L13/features/dino_vits16" \
 		--model_name dino_vits16 \
 		--batch_size 1
 
 	# Eigenvectors
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_eigs \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L13/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L13/accepted" \
 		--features_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L13/features/dino_vits16/" \
 		--which_matrix "laplacian" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L13/eigs/laplacian_dino_vits16" \
@@ -154,7 +154,7 @@ Level 9:
 	# Optionally, you can also use `--multiprocessing 64` to speed up computation by running on 64 processes
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_crf_segmentations \
 		--images_list "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L13/images.txt" \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L13/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L13/accepted" \
 		--segmentations_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L13/single_region_segmentation/patches/laplacian_dino_vits16" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L13/single_region_segmentation/crf/laplacian_dino_vits16" \
 		--downsample_factor 16 \
@@ -162,14 +162,14 @@ Level 9:
 	# Features
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_features \
 		--images_list "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L12/images.txt" \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L12/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L12/accepted" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L12/features/dino_vits16" \
 		--model_name dino_vits16 \
 		--batch_size 1
 
 	# Eigenvectors
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_eigs \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L12/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L12/accepted" \
 		--features_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L12/features/dino_vits16/" \
 		--which_matrix "laplacian" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L12/eigs/laplacian_dino_vits16" \
@@ -186,7 +186,7 @@ Level 9:
 	# Optionally, you can also use `--multiprocessing 64` to speed up computation by running on 64 processes
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_crf_segmentations \
 		--images_list "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L12/images.txt" \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L12/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L12/accepted" \
 		--segmentations_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L12/single_region_segmentation/patches/laplacian_dino_vits16" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L12/single_region_segmentation/crf/laplacian_dino_vits16" \
 		--downsample_factor 16 \
@@ -194,14 +194,14 @@ Level 9:
 	# Features
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_features \
 		--images_list "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L11/images.txt" \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L11/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L11/accepted" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L11/features/dino_vits16" \
 		--model_name dino_vits16 \
 		--batch_size 1
 
 	# Eigenvectors
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_eigs \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L11/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L11/accepted" \
 		--features_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L11/features/dino_vits16/" \
 		--which_matrix "laplacian" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L11/eigs/laplacian_dino_vits16" \
@@ -218,7 +218,7 @@ Level 9:
 	# Optionally, you can also use `--multiprocessing 64` to speed up computation by running on 64 processes
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_crf_segmentations \
 		--images_list "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L11/images.txt" \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L11/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L11/accepted" \
 		--segmentations_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L11/single_region_segmentation/patches/laplacian_dino_vits16" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L11/single_region_segmentation/crf/laplacian_dino_vits16" \
 		--downsample_factor 16 \
@@ -226,14 +226,14 @@ Level 9:
 	# Features
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_features \
 		--images_list "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L10/images.txt" \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L10/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L10/accepted" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L10/features/dino_vits16" \
 		--model_name dino_vits16 \
 		--batch_size 1
 
 	# Eigenvectors
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_eigs \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L10/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L10/accepted" \
 		--features_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L10/features/dino_vits16/" \
 		--which_matrix "laplacian" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L10/eigs/laplacian_dino_vits16" \
@@ -250,7 +250,7 @@ Level 9:
 	# Optionally, you can also use `--multiprocessing 64` to speed up computation by running on 64 processes
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_crf_segmentations \
 		--images_list "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L10/images.txt" \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L10/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L10/accepted" \
 		--segmentations_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L10/single_region_segmentation/patches/laplacian_dino_vits16" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L10/single_region_segmentation/crf/laplacian_dino_vits16" \
 		--downsample_factor 16 \
@@ -258,14 +258,14 @@ Level 9:
 	# Features
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_features \
 		--images_list "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L9/images.txt" \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L9/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L9/accepted" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L9/features/dino_vits16" \
 		--model_name dino_vits16 \
 		--batch_size 1
 
 	# Eigenvectors
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_eigs \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L9/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L9/accepted" \
 		--features_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L9/features/dino_vits16/" \
 		--which_matrix "laplacian" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L9/eigs/laplacian_dino_vits16" \
@@ -282,7 +282,7 @@ Level 9:
 	# Optionally, you can also use `--multiprocessing 64` to speed up computation by running on 64 processes
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_crf_segmentations \
 		--images_list "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L9/images.txt" \
-		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L9/images/accepted" \
+		--images_root "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L9/accepted" \
 		--segmentations_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L9/single_region_segmentation/patches/laplacian_dino_vits16" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L9/single_region_segmentation/crf/laplacian_dino_vits16" \
 		--downsample_factor 16 \
