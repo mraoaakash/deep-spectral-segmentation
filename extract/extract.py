@@ -350,6 +350,7 @@ def _extract_multi_region_segmentations(
         segmap[zero_region] = bg_index
 
     # Save dict
+    segmap = (segmap*255).astype(np.uint8)
     Image.fromarray(segmap).convert('L').save(output_file)
 
 
