@@ -312,9 +312,11 @@ def _extract_multi_region_segmentations(
         indices_by_gap = np.argsort(np.diff(data_dict['eigenvalues'].numpy()))[::-1]
         index_largest_gap = indices_by_gap[indices_by_gap != 0][0]  # remove zero and take the biggest
         n_clusters = index_largest_gap + 1
+        print(f'Number of clusters: {n_clusters}')
         # print(f'Number of clusters: {n_clusters}')
     else:
         n_clusters = non_adaptive_num_segments
+        print(f'Number of clusters: {n_clusters}')
 
     # K-Means
     print(n_clusters)
