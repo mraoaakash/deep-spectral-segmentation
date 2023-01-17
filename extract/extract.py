@@ -317,7 +317,7 @@ def _extract_multi_region_segmentations(
         n_clusters = non_adaptive_num_segments
 
     # K-Means
-    print(type(n_clusters))
+    print(n_clusters)
     kmeans = KMeans(n_clusters=n_clusters)
 
     # Compute segments using eigenvector or baseline K-means
