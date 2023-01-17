@@ -373,7 +373,7 @@ def extract_multi_region_segmentations(
     """
     utils.make_output_dir(output_dir)
     fn = partial(_extract_multi_region_segmentations, adaptive=adaptive, infer_bg_index=infer_bg_index,
-                 non_adaptive_num_segments=non_adaptive_num_segments, num_eigenvectors=num_eigenvectors, 
+                 non_adaptive_num_segments=4, num_eigenvectors=num_eigenvectors, 
                  kmeans_baseline=kmeans_baseline, output_dir=output_dir)
     inputs = utils.get_paired_input_files(features_dir, eigs_dir)
     utils.parallel_process(inputs, fn, multiprocessing)
