@@ -351,7 +351,7 @@ def _extract_multi_region_segmentations(
 
     # Save dict
     segmap = (segmap*255).astype(np.uint8)
-    Image.fromarray(segmap).convert('L').save(output_file)
+    Image.fromarray(segmap).convert('L').resize((256,256)).save(output_file)
 
 
 def extract_multi_region_segmentations(
