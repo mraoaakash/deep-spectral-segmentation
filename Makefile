@@ -12,7 +12,7 @@ Pool:
 	python /home/chs.rintu/Documents/chs-lab-ws02/research-cancerPathology/deep-spectral-segmentation/extract/extract.py extract_multi_region_segmentations \
 		--non_adaptive_num_segments ${N_SEG} \
 		--features_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L17/features/dino_vits16" \
-		--eigs_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L17/eigs/laplacian" \
+		--eigs_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L17/eigs/laplacian_dino_vits16" \
 		--output_dir "./data/object-segmentation/dataset/20190610_338_14-14_G-14-3526_Biopsy_TNBC_HnE_40X/L17/multi_region_segmentation/laplacian"
 
 	# Extract bounding boxes
